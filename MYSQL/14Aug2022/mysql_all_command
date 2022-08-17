@@ -1,0 +1,47 @@
+1. ###  login /server connection mysql command command dile ; dite hobe ###
+=> mysql -h localhost -u root -p
+
+2.### show all database ### 
+=> show databases;
+
+3.### create database  jai kono name dewya jabe  ####
+=> create database wdpf51;
+
+4. select database
+=> use wdpf51;
+
+5.##### all colums from a table ####
+=> select * from employees;
+
+6. ###  Specifc colums from a table ###
+=> SELECT employeeNumber,lastName,firstName FROM employees;
+
+7. ###  Specifc colums from a table ascending 1-8 onojai show korbe  employees database ar employeeNumber colums onoshare hobe ###
+
+=> SELECT employeeNumber,lastName,firstName FROM employees order by employeeNumber;
+
+8. ###  Specifc colums from a table ascending 1-8 onojai show korbe  employees database ar lastName ar colums onoshare hobe ###
+
+=> SELECT employeeNumber,lastName,firstName FROM employees order by lastName;
+
+8. ### last and first name  ascending 1-8 onojai show korbe  employees database ar lastName ar colums onoshare hobe ###
+
+=> SELECT employeeNumber,lastName,firstName FROM employees order by firstName,lastName;
+
+8. ### last and first name  ascending 1-8 onojai show korbe  employees database ar lastName ar colums onoshare hobe ###
+
+=> SELECT employeeNumber,lastName,firstName FROM employees order by firstName DESE;
+
+9.#### ... connection with where clasue
+SELECT employeeNumber,lastName,firstName,officeCode FROM employees WHERE officeCode =4;
+
+
+10. ###  employees ar modhe jaikhane officeCode ar 1 no ar jobTitle ####
+=>   SELECT employeeNumber,lastName,firstName,email FROM employees WHERE officeCode =1 AND jobTitle = "Sales Rep";
+
+11. 
+=> SELECT DISTINCT country FROM customers;
+
+12. 
+=> SELECT DISTINCT country FROM customers ORDER BY customerNumber;
+country NAME DISTINCT ONOJAI country K AKBAR OUTPUT DEKHABE; 
