@@ -14,10 +14,10 @@
         $valiemail = 0;
         $valipass = 0;
         if($email == " " && $pass==""){
-            echo "<h2> enter your email and  pass <br> </h2>";
+            echo "<h2> enter your email and  pass <br>  ";
             return 0;
         }
-        if($emal==""){
+        if($email==""){
             echo "<h2> enter your emial first </h2>";
         }
        else  if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
@@ -39,7 +39,12 @@
 
 
         if($valiemail ==1 && $valipass ==1){
+            session_start();
+            $_SESSION['email'] =$email;
+            $_SESSION['pass'] = $pass;
             echo "<h2>login successfully </h2>";
+            echo "<a href=\"session_home.php\"> home page</a>";
+
         }
     }
     ?>
